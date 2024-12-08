@@ -1,9 +1,14 @@
-function getShippingCost(country, price) {
+function getShippingCost(country) {
+  let price;
   switch (country) {
     case 'China':
+      price = 100;
     case 'Chile':
+      price = 250;
     case 'Australia':
+      price = 170;
     case 'Jamaica':
+      price = 120
       return `Shipping to ${country} will cost ${price} credits`;
       break;
     default:
@@ -11,8 +16,8 @@ function getShippingCost(country, price) {
   }
 }
 
-console.log(getShippingCost('China', 100));
-console.log(getShippingCost('Chile', 250));
-console.log(getShippingCost('Australia', 170));
-console.log(getShippingCost('Jamaica', 120));
+console.log(getShippingCost('China'));
+console.log(getShippingCost('Chile'));
+console.log(getShippingCost('Australia'));
+console.log(getShippingCost('Jamaica'));
 console.log(getShippingCost('Sweden'));
